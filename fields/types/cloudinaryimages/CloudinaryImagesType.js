@@ -338,6 +338,8 @@ cloudinaryimages.prototype.getRequestHandler = function(item, req, paths, callba
 				if (field.options.filenameAsPublicID) {
 					uploadOptions.public_id = file.originalname.substring(0, file.originalname.lastIndexOf('.'));
 				}
+				
+				uploadOptions.transformation = [{width: 1200, height: 900, crop: "limit", quality: 90 }];
 
 				cloudinary.uploader.upload(file.path, function(result) {
 					if (result.error) {
