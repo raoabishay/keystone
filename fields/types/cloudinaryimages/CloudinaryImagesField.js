@@ -39,7 +39,7 @@ var Thumbnail = React.createClass({
 			<div className='image-field image-sortable row col-sm-3 col-md-12' title={title}> 
 				<div className={previewClassName}> 
 					<a href={this.props.url} className='img-thumbnail'>
-						<img style={{ height: '90' }} className='img-load' src={'https://res.cloudinary.com/pe/image/upload/h_90,c_fill,f_auto/v'+this.props.version+'/'+this.props.public_id+'.'+this.props.format} />
+						<img style={{ height: '90' }} className='img-load' src={'https://res.cloudinary.com/pe/image/upload/q_30,h_90,c_fill,f_auto/v'+this.props.version+'/'+this.props.public_id+'.'+this.props.format} />
 						<span className={iconClassName} />
 					</a>
 				</div>
