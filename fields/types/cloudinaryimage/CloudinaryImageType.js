@@ -248,7 +248,7 @@ cloudinaryimage.prototype.addToSchema = function() {
 		 */
 		upload: function(file, options) {
 			var promise = new MPromise();
-			options.transformation = [{width: 1200, height: 900, crop: "fit", quality: 90 }];
+			options.transformation = [{width: 1200, height: 900, crop: "limit", quality: 90 }];
 			cloudinary.uploader.upload(file, function(result) {
 				promise.fulfill(result);
 			}, options);
