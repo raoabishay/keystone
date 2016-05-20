@@ -23,7 +23,7 @@ module.exports = Field.create({
 		if (this.hasLocal()) {
 			return this.state.localSource;
 		} else if (this.hasExisting()) {
-			return this.props.value.url;
+			return 'https://res.cloudinary.com/pe/image/upload/h_90,c_fill,f_auto/v'+this.props.value.version+'/'+this.props.value.public_id+'.'+this.props.value.format;
 		} else {
 			return null;
 		}
